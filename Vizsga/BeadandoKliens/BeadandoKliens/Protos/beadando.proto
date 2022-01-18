@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option csharp_namespace = "Beadando";
+
+package Beadandopackage;
+
+service Beadandopackage {
+  rpc Login(User) returns (Session_Id) {}
+  rpc Logout(Session_Id) returns (Result) {}
+  rpc Add(Data) returns (Result) {}
+  rpc List(Empty) returns (stream Product) {}
+  rpc Bid(Product2) returns (Result) {}
+  //rpc Delete() returns () {}
+}
+message Empty {
+}
+
+message User {
+  string name=1;
+  string passwd=2;
+}
+
+message Session_Id {
+  string id=1;
+}
+
+message Result {
+  string success=1;
+}
+
+message Data {
+   string Brand=1;
+   string Model=2;
+   string Type=3;
+   int32 Price=4;
+   string uid=5;
+   string Code=6;
+}
+
+message Product {
+   string Brand=1;
+   string Model=2;
+   string Type=3;
+   int32 Price=4;
+   string id=5;
+}
+
+message Product2 {
+   string code=1;
+   int32 price=2;
+   string uid=3;
+}

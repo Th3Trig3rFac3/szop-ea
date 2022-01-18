@@ -1,0 +1,6 @@
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.csproj.AssemblyReference.cache
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.GeneratedMSBuildEditorConfig.editorconfig
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.AssemblyInfoInputs.cache
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.AssemblyInfo.cs
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.csproj.CoreCompileInputs.cache
+E:\Egyetem\SZOP\Vizsga\Beadando\Beadando\obj\Debug\netcoreapp3.1\Beadando.MvcApplicationPartsAssemblyInfo.cache

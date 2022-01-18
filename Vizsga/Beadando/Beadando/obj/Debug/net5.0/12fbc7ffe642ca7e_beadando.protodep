@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/Beadando.cs \
+obj\Debug\net5.0\Protos/BeadandoGrpc.cs: Protos/beadando.proto

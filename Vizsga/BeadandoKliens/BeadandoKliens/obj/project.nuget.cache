@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0xFfjp/D38zdm8UYJGiE0FoRHHB7FkJeU/KcE8mdHcb/fY7uUD7dCOhzSfYhzSdsI6VSD55tBfyQsE/xgfON8g==",
+  "dgSpecHash": "rLMmA3l0zWTHDrpFg/NhIt6aZJqbEt4gH4efBXjlqQvytab9fB/iPO5yfM2kW8hckSWU+vqsFHxo+Rc62l47Cg==",
   "success": true,
   "projectFilePath": "C:\\Users\\jdomo\\Desktop\\Vizsga\\BeadandoKliens\\BeadandoKliens\\BeadandoKliens.csproj",
   "expectedPackageFiles": [
@@ -9,8 +9,13 @@
     "C:\\Users\\jdomo\\.nuget\\packages\\grpc.net.client\\2.41.0\\grpc.net.client.2.41.0.nupkg.sha512",
     "C:\\Users\\jdomo\\.nuget\\packages\\grpc.net.common\\2.41.0\\grpc.net.common.2.41.0.nupkg.sha512",
     "C:\\Users\\jdomo\\.nuget\\packages\\grpc.tools\\2.42.0\\grpc.tools.2.42.0.nupkg.sha512",
+    "C:\\Users\\jdomo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\jdomo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\jdomo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
-    "C:\\Users\\jdomo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\jdomo\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\jdomo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\jdomo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\jdomo\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

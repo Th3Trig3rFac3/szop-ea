@@ -58,6 +58,8 @@ namespace Beadando {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Beadando.Product> __Marshaller_Beadandopackage_Product = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Beadando.Product3> __Marshaller_Beadandopackage_Product3 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product3.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Beadando.Product2> __Marshaller_Beadandopackage_Product2 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product2.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -93,10 +95,18 @@ namespace Beadando {
         __Marshaller_Beadandopackage_Product);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Beadando.Product2, global::Beadando.Result> __Method_Bid = new grpc::Method<global::Beadando.Product2, global::Beadando.Result>(
+    static readonly grpc::Method<global::Beadando.Product3, global::Beadando.Result> __Method_Bid = new grpc::Method<global::Beadando.Product3, global::Beadando.Result>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Bid",
+        __Marshaller_Beadandopackage_Product3,
+        __Marshaller_Beadandopackage_Result);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Beadando.Product2, global::Beadando.Result> __Method_Delete = new grpc::Method<global::Beadando.Product2, global::Beadando.Result>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Delete",
         __Marshaller_Beadandopackage_Product2,
         __Marshaller_Beadandopackage_Result);
 
@@ -204,24 +214,44 @@ namespace Beadando {
         return CallInvoker.AsyncServerStreamingCall(__Method_List, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Beadando.Result Bid(global::Beadando.Product2 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Beadando.Result Bid(global::Beadando.Product3 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Bid(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Beadando.Result Bid(global::Beadando.Product2 request, grpc::CallOptions options)
+      public virtual global::Beadando.Result Bid(global::Beadando.Product3 request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Bid, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> BidAsync(global::Beadando.Product2 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> BidAsync(global::Beadando.Product3 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BidAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> BidAsync(global::Beadando.Product2 request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> BidAsync(global::Beadando.Product3 request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Bid, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Beadando.Result Delete(global::Beadando.Product2 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Delete(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Beadando.Result Delete(global::Beadando.Product2 request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Delete, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> DeleteAsync(global::Beadando.Product2 request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Beadando.Result> DeleteAsync(global::Beadando.Product2 request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Delete, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

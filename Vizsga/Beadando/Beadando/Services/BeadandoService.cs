@@ -8,6 +8,7 @@ namespace Beadando.Services
     {
         static readonly List<string> sessions = new List<string>();
         static List<Product> Products = new List<Product>();
+        static List<User> Users = new List<User>();
 
         public override async Task List(Empty vmi, Grpc.Core.IServerStreamWriter<Product> responseStream, Grpc.Core.ServerCallContext context)
         {
@@ -22,6 +23,7 @@ namespace Beadando.Services
             //foreach (var Product in Products)
             //    await responseStream.WriteAsync(Product);
         }
+
         public override Task<Result> Add(Data data, ServerCallContext context)
         {
             if (!sessions.Contains(data.Uid))
@@ -50,7 +52,7 @@ namespace Beadando.Services
         }
 
 
-        public override Task<Result> Bid(Product2 data, ServerCallContext context)
+        public override Task<Result> Bid(Product3 data, ServerCallContext context)
         {
             if (!sessions.Contains(data.Uid))
             {
@@ -66,17 +68,19 @@ namespace Beadando.Services
                     for (j = 0; j < Products.Count; j++) ;
                     if (j >= Products.Count)
                     {
-                        return Task.FromResult(new Result { Success = "No such product" }); ;
+                        return Task.FromResult(new Result { Success = "No such product" });
                     }
                     else
-                        if (Products[j].Price < data.Price)
                     {
-                        Products[j].Price = data.Price;
                         Products[j].Id = data.Uid;
-                        return Task.FromResult(new Result { Success = "OK" }); ;
+                        Products[j].Brand = data.Brand;
+                        Products[j].Model = data.Model;
+                        Products[j].Type = data.Type;
+                        Products[j].Price = data.Price;
+                        return Task.FromResult(new Result { Success = "OK" });
                     }
-                    else
-                        return Task.FromResult(new Result { Success = "Low price" }); ;
+                    //else
+                    //    return Task.FromResult(new Result { Success = "Low price" });
                 }
             }
         }
@@ -92,7 +96,7 @@ namespace Beadando.Services
         }
 
 
-        public override Task<Session_Id> Login(User user, ServerCallContext context)
+        public override Task<Session_Id> Login(User user, ServerCallContext context/*,Empty vmi, Grpc.Core.IServerStreamWriter<User> responseStream, Grpc.Core.ServerCallContext context2*/)
         {
             string id = "";
             if (user.Name == "u" && user.Passwd == "p")
@@ -105,7 +109,42 @@ namespace Beadando.Services
                 return Task.FromResult(new Session_Id { Id = id });
             }
             else
+            {
                 return Task.FromResult(new Session_Id { Id = null });
+            }
+
+            //DBConnect db = new DBConnect();
+            //foreach (var User in db.Select())
+            //    Users.Add(User);
+
+            //foreach (var User in Users)
+            //    await responseStream.WriteAsync(User);
+
+        }
+
+        public override Task<Result> Delete(Product2 data, ServerCallContext context)
+        {
+            if (!sessions.Contains(data.Uid))
+            {
+                return Task.FromResult(new Result { Success = "login" });
+            }
+            else
+            {
+                lock (Products)
+                {
+                    int i = 0;
+                    for (i = 0; i < Products.Count; i++) ;
+                    if (i < Products.Count)
+                    {
+                        return Task.FromResult(new Result { Success = "Deleted" });
+                        Products.RemoveAt(i);
+                    }
+                    else
+                    {
+                        return Task.FromResult(new Result { Success = "Not deleted" });
+                    }
+                }
+            }
         }
     }
 }

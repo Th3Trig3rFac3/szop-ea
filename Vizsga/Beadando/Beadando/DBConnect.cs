@@ -25,7 +25,7 @@ namespace Beadando
         {
             server = "localhost";
             database = "szop_vizsga";
-            uid = "";
+            uid = "root";
             password = "";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
@@ -57,6 +57,36 @@ namespace Beadando
                 return false;
             }
         }
+        public List<User> GetUsers()
+        {
+            string query = "SELECT * FROM users";
+            List<User> list = new List<User>();
+
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    User user = new User();
+                    user.Name = dataReader.GetString("Username");
+                    user.Passwd = dataReader.GetString("Password");
+                    user.Role = dataReader.GetInt32("Role");
+                    list.Add(user);
+                }
+                dataReader.Close();
+
+                this.CloseConnection();
+
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+
         public void Insert()
         {
             string query = "INSERT INTO cars (Brand, Model, Type, Price)"; //ezt kell átírni
@@ -113,11 +143,6 @@ namespace Beadando
 
             if (this.OpenConnection() == true)
             {
-
-                //MySqlCommand cmd = new MySqlCommand(query, connection);
-
-                //MySqlDataReader dataReader = cmd.ExecuteReader();
-
                 //while (dataReader.Read())
                 //{
                 //    Product product = new Product();
@@ -128,19 +153,17 @@ namespace Beadando
                 //    list.Add(product);
                 //}
 
-                //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    Product product = new();
-                    product.Price = int.Parse(dataReader.GetString("Price"));
+                    Product product = new Product();
                     product.Brand = dataReader.GetString("Brand");
                     product.Model = dataReader.GetString("Model");
                     product.Type = dataReader.GetString("Type");
+                    product.Price = dataReader.GetInt32("Price");
+                    list.Add(product);
                 }
                 dataReader.Close();
 

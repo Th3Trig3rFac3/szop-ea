@@ -58,6 +58,8 @@ namespace Beadando {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Beadando.Product> __Marshaller_Beadandopackage_Product = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Beadando.Product3> __Marshaller_Beadandopackage_Product3 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product3.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Beadando.Product2> __Marshaller_Beadandopackage_Product2 = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Beadando.Product2.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -93,10 +95,18 @@ namespace Beadando {
         __Marshaller_Beadandopackage_Product);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Beadando.Product2, global::Beadando.Result> __Method_Bid = new grpc::Method<global::Beadando.Product2, global::Beadando.Result>(
+    static readonly grpc::Method<global::Beadando.Product3, global::Beadando.Result> __Method_Bid = new grpc::Method<global::Beadando.Product3, global::Beadando.Result>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Bid",
+        __Marshaller_Beadandopackage_Product3,
+        __Marshaller_Beadandopackage_Result);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Beadando.Product2, global::Beadando.Result> __Method_Delete = new grpc::Method<global::Beadando.Product2, global::Beadando.Result>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Delete",
         __Marshaller_Beadandopackage_Product2,
         __Marshaller_Beadandopackage_Result);
 
@@ -135,7 +145,13 @@ namespace Beadando {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Beadando.Result> Bid(global::Beadando.Product2 request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Beadando.Result> Bid(global::Beadando.Product3 request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Beadando.Result> Delete(global::Beadando.Product2 request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -152,7 +168,8 @@ namespace Beadando {
           .AddMethod(__Method_Logout, serviceImpl.Logout)
           .AddMethod(__Method_Add, serviceImpl.Add)
           .AddMethod(__Method_List, serviceImpl.List)
-          .AddMethod(__Method_Bid, serviceImpl.Bid).Build();
+          .AddMethod(__Method_Bid, serviceImpl.Bid)
+          .AddMethod(__Method_Delete, serviceImpl.Delete).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -166,7 +183,8 @@ namespace Beadando {
       serviceBinder.AddMethod(__Method_Logout, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Beadando.Session_Id, global::Beadando.Result>(serviceImpl.Logout));
       serviceBinder.AddMethod(__Method_Add, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Beadando.Data, global::Beadando.Result>(serviceImpl.Add));
       serviceBinder.AddMethod(__Method_List, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Beadando.Empty, global::Beadando.Product>(serviceImpl.List));
-      serviceBinder.AddMethod(__Method_Bid, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Beadando.Product2, global::Beadando.Result>(serviceImpl.Bid));
+      serviceBinder.AddMethod(__Method_Bid, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Beadando.Product3, global::Beadando.Result>(serviceImpl.Bid));
+      serviceBinder.AddMethod(__Method_Delete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Beadando.Product2, global::Beadando.Result>(serviceImpl.Delete));
     }
 
   }

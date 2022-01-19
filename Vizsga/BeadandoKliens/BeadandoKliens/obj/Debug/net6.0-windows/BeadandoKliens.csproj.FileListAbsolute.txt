@@ -44,3 +44,6 @@ C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\obj\Debug\net6.0-win
 C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\obj\Debug\net6.0-windows\BeadandoKliens.pdb
 C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\obj\Debug\net6.0-windows\BeadandoKliens.genruntimeconfig.cache
 C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\obj\Debug\net6.0-windows\ref\BeadandoKliens.dll
+C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\bin\Debug\net6.0-windows\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\jdomo\Desktop\Vizsga\BeadandoKliens\BeadandoKliens\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll

@@ -50,6 +50,7 @@
             this.updatePrice = new System.Windows.Forms.TextBox();
             this.updateBtn = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.logOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -89,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 67);
+            this.label1.Location = new System.Drawing.Point(485, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 4;
@@ -145,6 +146,7 @@
             this.button4.TabIndex = 10;
             this.button4.Text = "Bid";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // textBox6
@@ -153,6 +155,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 23);
             this.textBox6.TabIndex = 11;
+            this.textBox6.Visible = false;
             // 
             // textBox7
             // 
@@ -160,6 +163,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 23);
             this.textBox7.TabIndex = 12;
+            this.textBox7.Visible = false;
             // 
             // deleteId
             // 
@@ -176,6 +180,7 @@
             this.deleteBtn.TabIndex = 14;
             this.deleteBtn.Text = "Delete at";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // updateID
             // 
@@ -230,11 +235,23 @@
             this.textBox8.Size = new System.Drawing.Size(100, 23);
             this.textBox8.TabIndex = 21;
             // 
+            // logOut
+            // 
+            this.logOut.Location = new System.Drawing.Point(642, 71);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(75, 23);
+            this.logOut.TabIndex = 22;
+            this.logOut.Text = "Logout";
+            this.logOut.UseVisualStyleBackColor = true;
+            this.logOut.Visible = false;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.logOut);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.updatePrice);
@@ -289,5 +306,6 @@
         private TextBox updatePrice;
         private Button updateBtn;
         private TextBox textBox8;
+        private Button logOut;
     }
 }

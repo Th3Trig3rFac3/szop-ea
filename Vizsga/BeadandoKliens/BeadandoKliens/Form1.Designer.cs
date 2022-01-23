@@ -79,6 +79,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "Felhasználónév";
             // 
             // textBox2
             // 
@@ -86,6 +87,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "Jelszó";
             // 
             // label1
             // 
@@ -113,6 +115,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 23);
             this.textBox3.TabIndex = 6;
+            this.textBox3.Text = "Új Márka";
             // 
             // textBox4
             // 
@@ -120,6 +123,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 23);
             this.textBox4.TabIndex = 7;
+            this.textBox4.Text = "Új Model";
             // 
             // textBox5
             // 
@@ -127,6 +131,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 23);
             this.textBox5.TabIndex = 8;
+            this.textBox5.Text = "Új Típus";
             // 
             // button3
             // 
@@ -169,12 +174,13 @@
             // 
             this.deleteId.Location = new System.Drawing.Point(206, 327);
             this.deleteId.Name = "deleteId";
-            this.deleteId.Size = new System.Drawing.Size(100, 23);
+            this.deleteId.Size = new System.Drawing.Size(115, 23);
             this.deleteId.TabIndex = 13;
+            this.deleteId.Text = "Törlendő sorszáma";
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(312, 327);
+            this.deleteBtn.Location = new System.Drawing.Point(327, 327);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(75, 23);
             this.deleteBtn.TabIndex = 14;
@@ -188,6 +194,7 @@
             this.updateID.Name = "updateID";
             this.updateID.Size = new System.Drawing.Size(100, 23);
             this.updateID.TabIndex = 15;
+            this.updateID.Text = "Sorszám";
             this.updateID.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // updateBrand
@@ -196,6 +203,7 @@
             this.updateBrand.Name = "updateBrand";
             this.updateBrand.Size = new System.Drawing.Size(100, 23);
             this.updateBrand.TabIndex = 16;
+            this.updateBrand.Text = "Márka";
             // 
             // updateModel
             // 
@@ -203,6 +211,7 @@
             this.updateModel.Name = "updateModel";
             this.updateModel.Size = new System.Drawing.Size(100, 23);
             this.updateModel.TabIndex = 17;
+            this.updateModel.Text = "Model";
             // 
             // updateType
             // 
@@ -210,6 +219,7 @@
             this.updateType.Name = "updateType";
             this.updateType.Size = new System.Drawing.Size(100, 23);
             this.updateType.TabIndex = 18;
+            this.updateType.Text = "Típus";
             // 
             // updatePrice
             // 
@@ -217,6 +227,7 @@
             this.updatePrice.Name = "updatePrice";
             this.updatePrice.Size = new System.Drawing.Size(100, 23);
             this.updatePrice.TabIndex = 19;
+            this.updatePrice.Text = "Ár";
             // 
             // updateBtn
             // 
@@ -234,6 +245,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 23);
             this.textBox8.TabIndex = 21;
+            this.textBox8.Text = "Új Ár";
             // 
             // logOut
             // 
@@ -275,7 +287,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Használtautó";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

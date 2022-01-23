@@ -86,3 +86,5 @@ C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\ro\Xceed.Wpf.Av
 C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+C:\Users\jdomo\Desktop\Vizsga\Beadando\Beadando\bin\Debug\net6.0\System.IO.Packaging.dll

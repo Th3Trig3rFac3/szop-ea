@@ -48,8 +48,7 @@ message Product {
 
 message Product2 {
    string code=1;
-   int32 price=2;
-   string uid=3;
+   string uid=2;
 }
 
 message Product3 {

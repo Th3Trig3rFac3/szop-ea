@@ -31,19 +31,19 @@ namespace Beadando {
             "BU1vZGVsGAIgASgJEgwKBFR5cGUYAyABKAkSDQoFUHJpY2UYBCABKAUSCwoD",
             "dWlkGAUgASgJEgwKBENvZGUYBiABKAkiUAoHUHJvZHVjdBINCgVCcmFuZBgB",
             "IAEoCRINCgVNb2RlbBgCIAEoCRIMCgRUeXBlGAMgASgJEg0KBVByaWNlGAQg",
-            "ASgFEgoKAmlkGAUgASgJIjQKCFByb2R1Y3QyEgwKBGNvZGUYASABKAkSDQoF",
-            "cHJpY2UYAiABKAUSCwoDdWlkGAMgASgJImAKCFByb2R1Y3QzEgsKA3VpZBgB",
-            "IAEoCRIMCgRjb2RlGAIgASgJEg0KBUJyYW5kGAMgASgJEg0KBU1vZGVsGAQg",
-            "ASgJEgwKBFR5cGUYBSABKAkSDQoFUHJpY2UYBiABKAUyhgMKD0JlYWRhbmRv",
-            "cGFja2FnZRI9CgVMb2dpbhIVLkJlYWRhbmRvcGFja2FnZS5Vc2VyGhsuQmVh",
-            "ZGFuZG9wYWNrYWdlLlNlc3Npb25fSWQiABJACgZMb2dvdXQSGy5CZWFkYW5k",
-            "b3BhY2thZ2UuU2Vzc2lvbl9JZBoXLkJlYWRhbmRvcGFja2FnZS5SZXN1bHQi",
-            "ABI3CgNBZGQSFS5CZWFkYW5kb3BhY2thZ2UuRGF0YRoXLkJlYWRhbmRvcGFj",
-            "a2FnZS5SZXN1bHQiABI8CgRMaXN0EhYuQmVhZGFuZG9wYWNrYWdlLkVtcHR5",
-            "GhguQmVhZGFuZG9wYWNrYWdlLlByb2R1Y3QiADABEjsKA0JpZBIZLkJlYWRh",
-            "bmRvcGFja2FnZS5Qcm9kdWN0MxoXLkJlYWRhbmRvcGFja2FnZS5SZXN1bHQi",
-            "ABI+CgZEZWxldGUSGS5CZWFkYW5kb3BhY2thZ2UuUHJvZHVjdDIaFy5CZWFk",
-            "YW5kb3BhY2thZ2UuUmVzdWx0IgBCC6oCCEJlYWRhbmRvYgZwcm90bzM="));
+            "ASgFEgoKAmlkGAUgASgJIiUKCFByb2R1Y3QyEgwKBGNvZGUYASABKAkSCwoD",
+            "dWlkGAIgASgJImAKCFByb2R1Y3QzEgsKA3VpZBgBIAEoCRIMCgRjb2RlGAIg",
+            "ASgJEg0KBUJyYW5kGAMgASgJEg0KBU1vZGVsGAQgASgJEgwKBFR5cGUYBSAB",
+            "KAkSDQoFUHJpY2UYBiABKAUyhgMKD0JlYWRhbmRvcGFja2FnZRI9CgVMb2dp",
+            "bhIVLkJlYWRhbmRvcGFja2FnZS5Vc2VyGhsuQmVhZGFuZG9wYWNrYWdlLlNl",
+            "c3Npb25fSWQiABJACgZMb2dvdXQSGy5CZWFkYW5kb3BhY2thZ2UuU2Vzc2lv",
+            "bl9JZBoXLkJlYWRhbmRvcGFja2FnZS5SZXN1bHQiABI3CgNBZGQSFS5CZWFk",
+            "YW5kb3BhY2thZ2UuRGF0YRoXLkJlYWRhbmRvcGFja2FnZS5SZXN1bHQiABI8",
+            "CgRMaXN0EhYuQmVhZGFuZG9wYWNrYWdlLkVtcHR5GhguQmVhZGFuZG9wYWNr",
+            "YWdlLlByb2R1Y3QiADABEjsKA0JpZBIZLkJlYWRhbmRvcGFja2FnZS5Qcm9k",
+            "dWN0MxoXLkJlYWRhbmRvcGFja2FnZS5SZXN1bHQiABI+CgZEZWxldGUSGS5C",
+            "ZWFkYW5kb3BhY2thZ2UuUHJvZHVjdDIaFy5CZWFkYW5kb3BhY2thZ2UuUmVz",
+            "dWx0IgBCC6oCCEJlYWRhbmRvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,7 +53,7 @@ namespace Beadando {
             new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Result), global::Beadando.Result.Parser, new[]{ "Success" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Data), global::Beadando.Data.Parser, new[]{ "Brand", "Model", "Type", "Price", "Uid", "Code" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Product), global::Beadando.Product.Parser, new[]{ "Brand", "Model", "Type", "Price", "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Product2), global::Beadando.Product2.Parser, new[]{ "Code", "Price", "Uid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Product2), global::Beadando.Product2.Parser, new[]{ "Code", "Uid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Beadando.Product3), global::Beadando.Product3.Parser, new[]{ "Uid", "Code", "Brand", "Model", "Type", "Price" }, null, null, null, null)
           }));
     }
@@ -1600,7 +1600,6 @@ namespace Beadando {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Product2(Product2 other) : this() {
       code_ = other.code_;
-      price_ = other.price_;
       uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1623,20 +1622,8 @@ namespace Beadando {
       }
     }
 
-    /// <summary>Field number for the "price" field.</summary>
-    public const int PriceFieldNumber = 2;
-    private int price_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Price {
-      get { return price_; }
-      set {
-        price_ = value;
-      }
-    }
-
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 3;
+    public const int UidFieldNumber = 2;
     private string uid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1663,7 +1650,6 @@ namespace Beadando {
         return true;
       }
       if (Code != other.Code) return false;
-      if (Price != other.Price) return false;
       if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1673,7 +1659,6 @@ namespace Beadando {
     public override int GetHashCode() {
       int hash = 1;
       if (Code.Length != 0) hash ^= Code.GetHashCode();
-      if (Price != 0) hash ^= Price.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1697,12 +1682,8 @@ namespace Beadando {
         output.WriteRawTag(10);
         output.WriteString(Code);
       }
-      if (Price != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Price);
-      }
       if (Uid.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Uid);
       }
       if (_unknownFields != null) {
@@ -1719,12 +1700,8 @@ namespace Beadando {
         output.WriteRawTag(10);
         output.WriteString(Code);
       }
-      if (Price != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(Price);
-      }
       if (Uid.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(Uid);
       }
       if (_unknownFields != null) {
@@ -1739,9 +1716,6 @@ namespace Beadando {
       int size = 0;
       if (Code.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
-      }
-      if (Price != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Price);
       }
       if (Uid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
@@ -1760,9 +1734,6 @@ namespace Beadando {
       }
       if (other.Code.Length != 0) {
         Code = other.Code;
-      }
-      if (other.Price != 0) {
-        Price = other.Price;
       }
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
@@ -1786,11 +1757,7 @@ namespace Beadando {
             Code = input.ReadString();
             break;
           }
-          case 16: {
-            Price = input.ReadInt32();
-            break;
-          }
-          case 26: {
+          case 18: {
             Uid = input.ReadString();
             break;
           }
@@ -1813,11 +1780,7 @@ namespace Beadando {
             Code = input.ReadString();
             break;
           }
-          case 16: {
-            Price = input.ReadInt32();
-            break;
-          }
-          case 26: {
+          case 18: {
             Uid = input.ReadString();
             break;
           }

@@ -21,7 +21,7 @@ namespace BeadandoKliens
             client = new Beadandopackage.BeadandopackageClient(channel);
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             //List<User> list = new List<User>();
             //using (var call = client.List(new Empty()))
@@ -52,24 +52,57 @@ namespace BeadandoKliens
             //        uid = temp.Substring(9, 36);
             //    }
             //}
-            if (textBox1.Text == "" && textBox2.Text == "")
+
+
+            //if (textBox1.Text == "" && textBox2.Text == "")
+            //{
+            //    label1.Text = "Error";
+            //}
+            //else if (textBox1.Text != "u" && textBox2.Text != "p")
+            //{
+            //    label1.Text = "Error";
+            //}
+            //else
+            //{
+            //    User user = new User(); user.Name = textBox1.Text; user.Passwd = textBox2.Text;
+            //    Session_Id tempuid = client.Login(user);
+            //    label1.Text = tempuid.ToString();
+            //    string temp = tempuid.ToString();
+            //    uid = temp.Substring(9, 36);
+            //    textBox1.Text = String.Empty;
+            //    textBox2.Text = String.Empty;
+            //}
+            //logOut.Visible = true;
+            //button2.Visible = false;
+
+
+
+            if (textBox1.Text != "" || textBox2.Text != "")
             {
-                label1.Text = "Error";
+                try
+                {
+                    User user = new User();
+                    user.Name = textBox1.Text;
+                    user.Passwd = textBox2.Text;
+                    Session_Id tempuid = client.Login(user);
+                    if (tempuid.ToString().Contains("N/A"))
+                    {
+                        label1.Text = "Bejelentkezés sikertelen";
+                    }
+                    else
+                    {
+                        string temp = tempuid.ToString();
+                        uid = temp.Substring(9, 36);
+                    }
+                }
+                catch (RpcException x)
+                {
+                    label1.Text = "Szerver hiba";
+                }
             }
-            else if (textBox1.Text != "u" && textBox2.Text != "p")
-            {
-                label1.Text = "Error";
-            }
-            else
-            {
-                User user = new User(); user.Name = textBox1.Text; user.Passwd = textBox2.Text;
-                Session_Id tempuid = client.Login(user);
-                label1.Text = tempuid.ToString();
-                string temp = tempuid.ToString();
-                uid = temp.Substring(9, 36);
-                textBox1.Text = String.Empty;
-                textBox2.Text = String.Empty;
-            }
+
+            textBox1.Text = String.Empty;
+            textBox2.Text = String.Empty;
             logOut.Visible = true;
             button2.Visible = false;
         }
@@ -83,9 +116,25 @@ namespace BeadandoKliens
             uid = null;
             textBox1.Text = String.Empty;
             textBox2.Text = String.Empty;
-            label1.Text = "You logged out";
             logOut.Visible = false;
             button2.Visible = true;
+
+            try
+            {
+                Session_Id s = new Session_Id();
+                s.Id = uid;
+                Result res = client.Logout(s);
+                label1.Text = res.ToString();
+                uid = null;
+                textBox1.Text = String.Empty;
+                textBox2.Text = String.Empty;
+                logOut.Visible = false;
+                button2.Visible = true;
+            }
+            catch (RpcException x)
+            {
+                label1.Text = "Szerver hiba";
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e) //list gomb
@@ -119,42 +168,55 @@ namespace BeadandoKliens
         {
             if (uid != null)
             {
-                using (var call = client.List(new Empty()))
+                try
                 {
-                    while (await call.ResponseStream.MoveNext())
+                    using (var call = client.List(new Empty()))
                     {
-                        Data data = new Data();
-                        data.Brand = textBox3.Text; data.Model = textBox4.Text; data.Type = textBox5.Text; data.Price = int.Parse(textBox8.Text);
-                        data.Uid = uid;
-                        Result res = client.Add(data);
-                        label1.Text = res.ToString();
+                        while (await call.ResponseStream.MoveNext())
+                        {
+                            Data data = new Data();
+                            data.Brand = textBox3.Text; data.Model = textBox4.Text; data.Type = textBox5.Text; data.Price = int.Parse(textBox8.Text);
+                            data.Uid = uid;
+                            Result res = client.Add(data);
+                            label1.Text = res.ToString();
+                        }
                     }
                 }
+                catch (Exception x)
+                {
+                    label1.Text = "Szerver hiba";
+                }
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e) //bid gomb
-        {
-            //Product2 data = new Product2();
-            //data.Code = textBox6.Text; data.Uid = uid;
-            //data.Price = int.Parse(textBox7.Text);
-            //Result ered = client.Bid(data);
-            //label1.Text = ered.ToString();
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
             if (uid != null)
             {
-                Product3 data = new Product3();
-                data.Code = updateID.Text;
-                data.Uid = uid;
-                data.Brand = updateModel.Text;
-                data.Model = updateModel.Text;
-                data.Type = updateModel.Text;
-                data.Price = int.Parse(updatePrice.Text) - 1;
-                Result ered = client.Bid(data);
-                label1.Text = ered.ToString();
+                try
+                {
+                    if (!(int.Parse(textBox7.Text) >= 0))
+                    {
+                        Product3 data = new Product3();
+                        data.Code = updateID.Text;
+                        data.Uid = uid;
+                        data.Brand = updateModel.Text;
+                        data.Model = updateModel.Text;
+                        data.Type = updateModel.Text;
+                        data.Price = int.Parse(updatePrice.Text) - 1;
+                        Result ered = client.Bid(data);
+                        label1.Text = ered.ToString();
+                    }
+                    else
+                    {
+                        label1.Text = "Nem lehet negatív az ár";
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    label1.Text = "Szerver hiba";
+                }
             }
         }
 
@@ -162,7 +224,18 @@ namespace BeadandoKliens
         {
             if (uid != null)
             {
-
+                try
+                {
+                    Product2 n = new Product2();
+                    n.Code = deleteId.Text;
+                    n.Uid = uid;
+                    Result res = client.Delete(n);
+                    label1.Text = res.ToString();
+                }
+                catch (Exception)
+                {
+                    label1.Text = "Szerver hiba";
+                }
             }
         }
         //trash
@@ -177,7 +250,14 @@ namespace BeadandoKliens
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
         }
-
+        private void button4_Click(object sender, EventArgs e) //bid gomb
+        {
+            //Product2 data = new Product2();
+            //data.Code = textBox6.Text; data.Uid = uid;
+            //data.Price = int.Parse(textBox7.Text);
+            //Result ered = client.Bid(data);
+            //label1.Text = ered.ToString();
+        }
 
     }
 }
